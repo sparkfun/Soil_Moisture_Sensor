@@ -16943,6 +16943,63 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </deviceset>
 </devicesets>
 </library>
+<library name="SparkFun-Electromechanical">
+<description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
+In this library you'll find anything that moves- switches, relays, buttons, potentiometers. Also, anything that goes on a board but isn't electrical in nature- screws, standoffs, etc.&lt;br&gt;&lt;br&gt;
+We've spent an enormous amount of time creating and checking these footprints and parts, but it is the end user's responsibility to ensure correctness and suitablity for a given componet or application. If you enjoy using this library, please buy one of our products at www.sparkfun.com.
+&lt;br&gt;&lt;br&gt;
+&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
+&lt;br&gt;&lt;br&gt;
+You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
+<packages>
+<package name="STAND-OFF">
+<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
+This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
+<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<hole x="0" y="0" drill="3.302"/>
+</package>
+<package name="STAND-OFF-TIGHT">
+<description>&lt;b&gt;Stand Off&lt;/b&gt;&lt;p&gt;
+This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
+<wire x1="0" y1="1.8542" x2="0" y2="-1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="41" curve="-180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="180"/>
+<wire x1="0" y1="-1.8542" x2="0" y2="1.8542" width="0.2032" layer="42" curve="-180"/>
+<circle x="0" y="0" radius="2.794" width="0.127" layer="39"/>
+<hole x="0" y="0" drill="3.048"/>
+</package>
+</packages>
+<symbols>
+<symbol name="STAND-OFF">
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="STAND-OFF" prefix="STANDOFF">
+<description>&lt;b&gt;#4 Stand Off&lt;/b&gt;&lt;p&gt;
+This is the mechanical footprint for a #4 phillips button head screw. Use the keepout ring to avoid running the screw head into surrounding components. SKU : PRT-00447</description>
+<gates>
+<gate name="G$1" symbol="STAND-OFF" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="STAND-OFF">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="TIGHT" package="STAND-OFF-TIGHT">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -16957,34 +17014,65 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <part name="R1" library="SparkFun-Resistors" deviceset="100OHM-1/4W-5%(0603)" device="" value="10kOhm"/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="R2" library="SparkFun-Resistors" deviceset="100OHM-1/4W-5%(0603)" device="" value="100Ohm"/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device=""/>
+<part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="">
+<attribute name="DESIGNER" value="Joel Bartlett"/>
+</part>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M03" device="POLAR"/>
+<part name="JP2" library="SparkFun-Connectors" deviceset="M03" device="SCREW"/>
+<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
+<part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
+<part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
+<part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="96.52" y="106.68" size="1.778" layer="91">Test different values for R1 to get better power consumption while still getting a good ADC reading. </text>
+<text x="127" y="111.76" size="1.778" layer="91">Test different values for R1 to get lower power consumption while still getting a good ADC reading. </text>
+<wire x1="0" y1="93.98" x2="116.84" y2="93.98" width="0.2032" layer="97" style="dashdot"/>
+<wire x1="116.84" y1="93.98" x2="248.92" y2="93.98" width="0.2032" layer="97" style="dashdot"/>
+<wire x1="248.92" y1="93.98" x2="248.92" y2="91.44" width="0.2032" layer="97" style="dashdot"/>
+<wire x1="114.3" y1="185.42" x2="116.84" y2="185.42" width="0.2032" layer="97" style="dashdot"/>
+<wire x1="116.84" y1="185.42" x2="116.84" y2="93.98" width="0.2032" layer="97" style="dashdot"/>
+<text x="144.78" y="38.1" size="1.27" layer="91">Based off the Soil Moisture Circuit found at: http://www.faludi.com/2006/11/02/moisture-sensor-circuit/</text>
+<text x="144.78" y="43.18" size="1.27" layer="91">Rod length and spacing were not the most significant variables. 
+In general you want the probes long enough to reach the moist soil and not so close together that they are likely to touch accidentally. 
+Keeping them about an inch apart works great. 
+The big variable is the composition of the soil itselfj (especially salts), so ideally you would calibrate for each type of soil. 
+-Rob Faludi</text>
+<text x="45.72" y="170.18" size="1.778" layer="95">Connectors: </text>
+<text x="167.64" y="172.72" size="1.778" layer="95">Probe Circuit</text>
 </plain>
 <instances>
-<instance part="Q1" gate="G$1" x="132.08" y="142.24"/>
-<instance part="R1" gate="G$1" x="134.62" y="124.46" rot="R90"/>
-<instance part="SUPPLY1" gate="G$1" x="134.62" y="152.4"/>
-<instance part="GND1" gate="1" x="134.62" y="114.3"/>
-<instance part="JP1" gate="G$1" x="78.74" y="144.78"/>
-<instance part="R2" gate="G$1" x="154.94" y="134.62" rot="R90"/>
-<instance part="SUPPLY2" gate="G$1" x="154.94" y="152.4"/>
-<instance part="SUPPLY3" gate="G$1" x="88.9" y="149.86"/>
-<instance part="GND2" gate="1" x="88.9" y="137.16"/>
+<instance part="Q1" gate="G$1" x="162.56" y="147.32"/>
+<instance part="R1" gate="G$1" x="165.1" y="129.54" rot="R90"/>
+<instance part="SUPPLY1" gate="G$1" x="165.1" y="157.48"/>
+<instance part="GND1" gate="1" x="165.1" y="119.38"/>
+<instance part="R2" gate="G$1" x="185.42" y="139.7" rot="R90"/>
+<instance part="SUPPLY2" gate="G$1" x="185.42" y="157.48"/>
+<instance part="SUPPLY3" gate="G$1" x="71.12" y="147.32"/>
+<instance part="GND2" gate="1" x="71.12" y="134.62"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
-<instance part="FRAME1" gate="V" x="147.32" y="0"/>
+<instance part="FRAME1" gate="V" x="147.32" y="0" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="160.02" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="233.68" y="1.27" size="2.54" layer="94" font="vector"/>
+<attribute name="DRAWING_NAME" x="162.814" y="17.78" size="2.7432" layer="94" font="vector"/>
+<attribute name="DESIGNER" x="173.99" y="11.43" size="2.54" layer="94"/>
+<attribute name="VERSION" x="236.22" y="6.35" size="2.54" layer="94" font="vector"/>
+</instance>
 <instance part="LOGO1" gate="G$1" x="88.9" y="0"/>
 <instance part="LOGO2" gate="G$1" x="76.2" y="10.16"/>
+<instance part="JP1" gate="G$1" x="45.72" y="142.24" rot="R180"/>
+<instance part="JP2" gate="G$1" x="60.96" y="142.24"/>
+<instance part="SUPPLY4" gate="G$1" x="35.56" y="147.32"/>
+<instance part="GND3" gate="1" x="35.56" y="134.62"/>
+<instance part="STANDOFF1" gate="G$1" x="137.16" y="33.02"/>
+<instance part="STANDOFF2" gate="G$1" x="142.24" y="33.02"/>
 </instances>
 <busses>
 </busses>
@@ -16993,62 +17081,79 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <segment>
 <pinref part="Q1" gate="G$1" pin="E"/>
 <pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="134.62" y1="129.54" x2="134.62" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="132.08" x2="134.62" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="134.62" y1="132.08" x2="124.46" y2="132.08" width="0.1524" layer="91"/>
-<junction x="134.62" y="132.08"/>
-<label x="124.46" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="134.62" x2="165.1" y2="137.16" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="137.16" x2="165.1" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="137.16" x2="154.94" y2="137.16" width="0.1524" layer="91"/>
+<junction x="165.1" y="137.16"/>
+<label x="154.94" y="137.16" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
-<wire x1="86.36" y1="144.78" x2="88.9" y2="144.78" width="0.1524" layer="91"/>
-<label x="88.9" y="144.78" size="1.27" layer="95" xref="yes"/>
+<label x="33.02" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="38.1" y1="139.7" x2="33.02" y2="139.7" width="0.1524" layer="91"/>
+<pinref part="JP1" gate="G$1" pin="3"/>
+</segment>
+<segment>
+<pinref part="JP2" gate="G$1" pin="1"/>
+<wire x1="68.58" y1="139.7" x2="73.66" y2="139.7" width="0.1524" layer="91"/>
+<label x="73.66" y="139.7" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VCC" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="C"/>
 <pinref part="SUPPLY1" gate="G$1" pin="VCC"/>
-<wire x1="134.62" y1="152.4" x2="134.62" y2="147.32" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="157.48" x2="165.1" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="3"/>
-<wire x1="86.36" y1="147.32" x2="88.9" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="SUPPLY3" gate="G$1" pin="VCC"/>
-<wire x1="88.9" y1="147.32" x2="88.9" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="144.78" x2="71.12" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="144.78" x2="71.12" y2="147.32" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="G$1" pin="3"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="2"/>
 <pinref part="SUPPLY2" gate="G$1" pin="VCC"/>
-<wire x1="154.94" y1="139.7" x2="154.94" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="144.78" x2="185.42" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
+<wire x1="38.1" y1="144.78" x2="35.56" y2="144.78" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="144.78" x2="35.56" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <pinref part="GND1" gate="1" pin="GND"/>
-<wire x1="134.62" y1="116.84" x2="134.62" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="121.92" x2="165.1" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="86.36" y1="142.24" x2="88.9" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
-<wire x1="88.9" y1="142.24" x2="88.9" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="137.16" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="142.24" x2="68.58" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="JP2" gate="G$1" pin="2"/>
+</segment>
+<segment>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="GND3" gate="1" pin="GND"/>
+<wire x1="38.1" y1="142.24" x2="35.56" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="35.56" y1="142.24" x2="35.56" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="PROBE1" class="0">
 <segment>
 <pinref part="Q1" gate="G$1" pin="B"/>
-<wire x1="129.54" y1="142.24" x2="124.46" y2="142.24" width="0.1524" layer="91"/>
-<label x="124.46" y="142.24" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="160.02" y1="147.32" x2="154.94" y2="147.32" width="0.1524" layer="91"/>
+<label x="154.94" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PROBE2" class="0">
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="129.54" x2="154.94" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="154.94" y1="114.3" x2="160.02" y2="114.3" width="0.1524" layer="91"/>
-<label x="160.02" y="114.3" size="1.27" layer="95" xref="yes"/>
+<wire x1="185.42" y1="134.62" x2="185.42" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="185.42" y1="119.38" x2="190.5" y2="119.38" width="0.1524" layer="91"/>
+<label x="190.5" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -17056,4 +17161,10 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 </sheets>
 </schematic>
 </drawing>
+<compatibility>
+<note version="6.3" minversion="6.2.2" severity="warning">
+Since Version 6.2.2 text objects can contain more than one line,
+which will not be processed correctly with this version.
+</note>
+</compatibility>
 </eagle>
