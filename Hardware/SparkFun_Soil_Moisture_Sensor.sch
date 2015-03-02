@@ -17043,9 +17043,11 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <text x="144.78" y="43.18" size="1.27" layer="91">Rod length and spacing were not the most significant variables. 
 In general you want the probes long enough to reach the moist soil and not so close together that they are likely to touch accidentally. 
 Keeping them about an inch apart works great. 
-The big variable is the composition of the soil itselfj (especially salts), so ideally you would calibrate for each type of soil. 
+The big variable is the composition of the soil itself (especially salts), so ideally you would calibrate for each type of soil. 
 -Rob Faludi</text>
-<text x="45.72" y="170.18" size="1.778" layer="95">Connectors: </text>
+<text x="30.48" y="165.1" size="1.778" layer="95">Connectors: 
+JST Jumper 3 Wire Assembly - PRT-09915
+Screw Terminals 3.5mm Pitch (3-Pin) - PRT-08235</text>
 <text x="167.64" y="172.72" size="1.778" layer="95">Probe Circuit</text>
 </plain>
 <instances>
