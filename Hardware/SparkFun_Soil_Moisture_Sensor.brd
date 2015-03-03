@@ -8,7 +8,7 @@
 </settings>
 <grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.005" altunitdist="inch" altunit="inch"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -24,20 +24,20 @@
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
-<layer number="20" name="Dimension" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="21" name="tPlace" color="16" fill="1" visible="yes" active="yes"/>
-<layer number="22" name="bPlace" color="14" fill="1" visible="yes" active="yes"/>
-<layer number="23" name="tOrigins" color="15" fill="1" visible="yes" active="yes"/>
-<layer number="24" name="bOrigins" color="15" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
+<layer number="20" name="Dimension" color="15" fill="1" visible="no" active="yes"/>
+<layer number="21" name="tPlace" color="16" fill="1" visible="no" active="yes"/>
+<layer number="22" name="bPlace" color="14" fill="1" visible="no" active="yes"/>
+<layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
+<layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
-<layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="3" visible="yes" active="yes"/>
+<layer number="30" name="bStop" color="7" fill="6" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="5" visible="no" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="yes"/>
@@ -52,13 +52,13 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="no" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="no" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
 <layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="no" active="yes"/>
-<layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="49" name="Reference" color="7" fill="1" visible="no" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="6" fill="1" visible="no" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="no" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -176,7 +176,62 @@
 <text x="13.208" y="46.101" size="1.27" layer="16" font="vector" ratio="15" rot="SMR0">V10</text>
 <dimension x1="7.62" y1="7.62" x2="15.24" y2="7.62" x3="11.43" y3="1.27" textsize="1.27" textratio="15" layer="51" unit="inch"/>
 <dimension x1="2.54" y1="58.42" x2="20.32" y2="58.42" x3="11.43" y3="62.23" textsize="1.27" textratio="15" layer="51" unit="inch"/>
-<text x="35.56" y="29.21" size="1.27" layer="51" font="vector" ratio="15">How do I expose the probe pads?</text>
+<wire x1="0" y1="44.45" x2="7.62" y2="44.45" width="0.254" layer="29"/>
+<wire x1="7.62" y1="44.45" x2="7.62" y2="7.62" width="0.254" layer="29"/>
+<wire x1="7.62" y1="7.62" x2="5.08" y2="0" width="0.254" layer="29"/>
+<wire x1="5.08" y1="0" x2="2.54" y2="0" width="0.254" layer="29"/>
+<wire x1="2.54" y1="0" x2="0" y2="7.62" width="0.254" layer="29"/>
+<wire x1="0" y1="7.62" x2="0" y2="44.45" width="0.254" layer="29"/>
+<wire x1="15.24" y1="44.45" x2="15.24" y2="7.62" width="0.254" layer="29"/>
+<wire x1="15.24" y1="7.62" x2="17.78" y2="0" width="0.254" layer="29"/>
+<wire x1="17.78" y1="0" x2="20.32" y2="0" width="0.254" layer="29"/>
+<wire x1="20.32" y1="0" x2="22.86" y2="7.62" width="0.254" layer="29"/>
+<wire x1="22.86" y1="7.62" x2="22.86" y2="44.45" width="0.254" layer="29"/>
+<wire x1="22.86" y1="44.45" x2="15.24" y2="44.45" width="0.254" layer="29"/>
+<wire x1="0" y1="44.45" x2="0" y2="7.62" width="0.254" layer="30"/>
+<wire x1="0" y1="7.62" x2="2.54" y2="0" width="0.254" layer="30"/>
+<wire x1="2.54" y1="0" x2="5.08" y2="0" width="0.254" layer="30"/>
+<wire x1="5.08" y1="0" x2="7.62" y2="7.62" width="0.254" layer="30"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="44.45" width="0.254" layer="30"/>
+<wire x1="7.62" y1="44.45" x2="0" y2="44.45" width="0.254" layer="30"/>
+<wire x1="15.24" y1="44.45" x2="15.24" y2="7.62" width="0.254" layer="30"/>
+<wire x1="15.24" y1="7.62" x2="17.78" y2="0" width="0.254" layer="30"/>
+<wire x1="17.78" y1="0" x2="20.32" y2="0" width="0.254" layer="30"/>
+<wire x1="20.32" y1="0" x2="22.86" y2="7.62" width="0.254" layer="30"/>
+<wire x1="22.86" y1="7.62" x2="22.86" y2="44.45" width="0.254" layer="30"/>
+<wire x1="22.86" y1="44.45" x2="15.24" y2="44.45" width="0.254" layer="30"/>
+<polygon width="0.254" layer="29">
+<vertex x="0" y="44.45"/>
+<vertex x="0" y="7.62"/>
+<vertex x="2.54" y="0"/>
+<vertex x="5.08" y="0"/>
+<vertex x="7.62" y="7.62"/>
+<vertex x="7.62" y="44.45"/>
+</polygon>
+<polygon width="0.254" layer="29">
+<vertex x="15.24" y="44.45"/>
+<vertex x="15.24" y="7.62"/>
+<vertex x="17.78" y="0"/>
+<vertex x="20.32" y="0"/>
+<vertex x="22.86" y="7.62"/>
+<vertex x="22.86" y="44.45"/>
+</polygon>
+<polygon width="0.254" layer="30">
+<vertex x="0" y="44.45"/>
+<vertex x="0" y="7.62"/>
+<vertex x="2.54" y="0"/>
+<vertex x="5.08" y="0"/>
+<vertex x="7.62" y="7.62"/>
+<vertex x="7.62" y="44.45"/>
+</polygon>
+<polygon width="0.254" layer="30">
+<vertex x="15.24" y="44.45"/>
+<vertex x="15.24" y="7.62"/>
+<vertex x="17.78" y="0"/>
+<vertex x="20.32" y="0"/>
+<vertex x="22.86" y="7.62"/>
+<vertex x="22.86" y="44.45"/>
+</polygon>
 </plain>
 <libraries>
 <library name="SparkFun-DiscreteSemi">
@@ -1549,15 +1604,14 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <class number="0" name="default" width="0" drill="0">
 </class>
 </classes>
-<designrules name="default">
+<designrules name="SparkFun-2-layer">
 <description language="en">&lt;b&gt;EAGLE Design Rules&lt;/b&gt;
 &lt;p&gt;
 The default Design Rules have been set to cover
 a wide range of applications. Your particular design
 may have different requirements, so please make the
 necessary adjustments and save your customized
-design rules under a new name.
-</description>
+design rules under a new name.</description>
 <param name="layerSetup" value="(1*16)"/>
 <param name="mtCopper" value="0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm 0.035mm"/>
 <param name="mtIsolate" value="1.5mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm 0.15mm 0.2mm"/>
@@ -1572,11 +1626,11 @@ design rules under a new name.
 <param name="mdSmdSmd" value="8mil"/>
 <param name="mdViaViaSameLayer" value="8mil"/>
 <param name="mnLayersViaInSmd" value="2"/>
-<param name="mdCopperDimension" value="40mil"/>
+<param name="mdCopperDimension" value="8mil"/>
 <param name="mdDrill" value="8mil"/>
 <param name="mdSmdStop" value="0mil"/>
-<param name="msWidth" value="10mil"/>
-<param name="msDrill" value="0.6mm"/>
+<param name="msWidth" value="7mil"/>
+<param name="msDrill" value="15mil"/>
 <param name="msMicroVia" value="9.99mm"/>
 <param name="msBlindViaRatio" value="0.5"/>
 <param name="rvPadTop" value="0.25"/>
@@ -1586,15 +1640,15 @@ design rules under a new name.
 <param name="rvViaInner" value="0.25"/>
 <param name="rvMicroViaOuter" value="0.25"/>
 <param name="rvMicroViaInner" value="0.25"/>
-<param name="rlMinPadTop" value="10mil"/>
+<param name="rlMinPadTop" value="12mil"/>
 <param name="rlMaxPadTop" value="20mil"/>
 <param name="rlMinPadInner" value="10mil"/>
 <param name="rlMaxPadInner" value="20mil"/>
-<param name="rlMinPadBottom" value="10mil"/>
+<param name="rlMinPadBottom" value="12mil"/>
 <param name="rlMaxPadBottom" value="20mil"/>
-<param name="rlMinViaOuter" value="8mil"/>
+<param name="rlMinViaOuter" value="10mil"/>
 <param name="rlMaxViaOuter" value="20mil"/>
-<param name="rlMinViaInner" value="8mil"/>
+<param name="rlMinViaInner" value="10mil"/>
 <param name="rlMaxViaInner" value="20mil"/>
 <param name="rlMinMicroViaOuter" value="4mil"/>
 <param name="rlMaxMicroViaOuter" value="20mil"/>
@@ -1611,7 +1665,7 @@ design rules under a new name.
 <param name="mlMaxStopFrame" value="4mil"/>
 <param name="mlMinCreamFrame" value="0mil"/>
 <param name="mlMaxCreamFrame" value="0mil"/>
-<param name="mlViaStopLimit" value="0mil"/>
+<param name="mlViaStopLimit" value="20mil"/>
 <param name="srRoundness" value="0"/>
 <param name="srMinRoundness" value="0mil"/>
 <param name="srMaxRoundness" value="0mil"/>
@@ -1620,11 +1674,11 @@ design rules under a new name.
 <param name="dpMaxLengthDifference" value="10mm"/>
 <param name="dpGapFactor" value="2.5"/>
 <param name="checkGrid" value="0"/>
-<param name="checkAngle" value="0"/>
+<param name="checkAngle" value="1"/>
 <param name="checkFont" value="1"/>
 <param name="checkRestrict" value="1"/>
 <param name="useDiameter" value="13"/>
-<param name="maxErrors" value="999999"/>
+<param name="maxErrors" value="50"/>
 </designrules>
 <autorouter>
 <pass name="Default">
