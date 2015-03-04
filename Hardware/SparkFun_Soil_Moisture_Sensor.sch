@@ -11478,6 +11478,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0.4186" y="-1.0105"/>
 </polygon>
 </package>
+<package name="FIDUCIAL-1X2">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="MICRO-FIDUCIAL">
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="VCC">
@@ -16153,6 +16159,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <vertex x="0.6834" y="-1.65"/>
 </polygon>
 </symbol>
+<symbol name="FIDUCIAL">
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="VCC" prefix="SUPPLY">
@@ -16286,6 +16297,25 @@ logo. Default layer for the logo on the board is tSilk.</description>
 </technologies>
 </device>
 <device name="L" package="OSHW-LOGO-L">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" prefix="FID">
+<description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
+Various fiducial points for machine vision alignment.</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="MICRO-FIDUCIAL">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -17011,10 +17041,10 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </classes>
 <parts>
 <part name="Q1" library="SparkFun-DiscreteSemi" deviceset="TRANSISTOR_NPN" device="MMBT2222A" value="2N3904"/>
-<part name="R1" library="SparkFun-Resistors" deviceset="100OHM-1/4W-5%(0603)" device="" value="10kOhm"/>
+<part name="R1" library="SparkFun-Resistors" deviceset="100OHM-1/4W-5%(0603)" device="" value="10k"/>
 <part name="SUPPLY1" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="R2" library="SparkFun-Resistors" deviceset="100OHM-1/4W-5%(0603)" device="" value="100Ohm"/>
+<part name="R2" library="SparkFun-Resistors" deviceset="100OHM-1/4W-5%(0603)" device="" value="100"/>
 <part name="SUPPLY2" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="SUPPLY3" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -17029,16 +17059,18 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
+<part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 <text x="127" y="111.76" size="1.778" layer="91">Test different values for R1 to get lower power consumption while still getting a good ADC reading. </text>
-<wire x1="0" y1="93.98" x2="116.84" y2="93.98" width="0.2032" layer="97" style="dashdot"/>
-<wire x1="116.84" y1="93.98" x2="248.92" y2="93.98" width="0.2032" layer="97" style="dashdot"/>
+<wire x1="0" y1="93.98" x2="116.84" y2="93.98" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="116.84" y1="93.98" x2="248.92" y2="93.98" width="0.2032" layer="97" style="shortdash"/>
 <wire x1="248.92" y1="93.98" x2="248.92" y2="91.44" width="0.2032" layer="97" style="dashdot"/>
 <wire x1="114.3" y1="185.42" x2="116.84" y2="185.42" width="0.2032" layer="97" style="dashdot"/>
-<wire x1="116.84" y1="185.42" x2="116.84" y2="93.98" width="0.2032" layer="97" style="dashdot"/>
+<wire x1="116.84" y1="185.42" x2="116.84" y2="93.98" width="0.2032" layer="97" style="shortdash"/>
 <text x="144.78" y="38.1" size="1.27" layer="91">Based off the Soil Moisture Circuit found at: http://www.faludi.com/2006/11/02/moisture-sensor-circuit/</text>
 <text x="144.78" y="43.18" size="1.27" layer="91">Rod length and spacing were not the most significant variables. 
 In general you want the probes long enough to reach the moist soil and not so close together that they are likely to touch accidentally. 
@@ -17049,6 +17081,7 @@ The big variable is the composition of the soil itself (especially salts), so id
 JST Jumper 3 Wire Assembly - PRT-09915
 Screw Terminals 3.5mm Pitch (3-Pin) - PRT-08235</text>
 <text x="167.64" y="172.72" size="1.778" layer="95">Probe Circuit</text>
+<text x="30.48" y="160.02" size="1.778" layer="97">Vcc = 3.3V-5V</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="162.56" y="147.32"/>
@@ -17075,6 +17108,8 @@ Screw Terminals 3.5mm Pitch (3-Pin) - PRT-08235</text>
 <instance part="GND3" gate="1" x="35.56" y="134.62"/>
 <instance part="STANDOFF1" gate="G$1" x="137.16" y="33.02"/>
 <instance part="STANDOFF2" gate="G$1" x="142.24" y="33.02"/>
+<instance part="FID1" gate="G$1" x="137.16" y="27.94"/>
+<instance part="FID2" gate="G$1" x="142.24" y="27.94"/>
 </instances>
 <busses>
 </busses>
