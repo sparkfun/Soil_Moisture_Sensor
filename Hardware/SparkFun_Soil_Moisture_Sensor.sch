@@ -17053,8 +17053,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 </part>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M03" device="POLAR"/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M03" device="SCREW"/>
+<part name="JP1" library="SparkFun-Connectors" deviceset="M03" device="POLAR" value="DNP"/>
+<part name="JP2" library="SparkFun-Connectors" deviceset="M03" device="SCREW" value="DNP"/>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
