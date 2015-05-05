@@ -17050,6 +17050,7 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="FRAME1" library="SparkFun-Aesthetics" deviceset="FRAME-LETTER" device="">
 <attribute name="DESIGNER" value="Joel Bartlett"/>
+<attribute name="VERSION" value="v10"/>
 </part>
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
@@ -17065,14 +17066,14 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <sheets>
 <sheet>
 <plain>
-<text x="127" y="111.76" size="1.778" layer="91">Test different values for R1 to get lower power consumption while still getting a good ADC reading. </text>
+<text x="127" y="111.76" size="1.778" layer="97">Test different values for R1 to get lower power consumption while still getting a good ADC reading. </text>
 <wire x1="0" y1="93.98" x2="116.84" y2="93.98" width="0.2032" layer="97" style="shortdash"/>
 <wire x1="116.84" y1="93.98" x2="248.92" y2="93.98" width="0.2032" layer="97" style="shortdash"/>
 <wire x1="248.92" y1="93.98" x2="248.92" y2="91.44" width="0.2032" layer="97" style="dashdot"/>
 <wire x1="114.3" y1="185.42" x2="116.84" y2="185.42" width="0.2032" layer="97" style="dashdot"/>
 <wire x1="116.84" y1="185.42" x2="116.84" y2="93.98" width="0.2032" layer="97" style="shortdash"/>
-<text x="144.78" y="38.1" size="1.27" layer="91">Based off the Soil Moisture Circuit found at: http://www.faludi.com/2006/11/02/moisture-sensor-circuit/</text>
-<text x="144.78" y="43.18" size="1.27" layer="91">Rod length and spacing were not the most significant variables. 
+<text x="104.14" y="38.1" size="1.778" layer="97">Based off the Soil Moisture Circuit found at: http://www.faludi.com/2006/11/02/moisture-sensor-circuit/</text>
+<text x="104.14" y="43.18" size="1.778" layer="97">Rod length and spacing were not the most significant variables. 
 In general you want the probes long enough to reach the moist soil and not so close together that they are likely to touch accidentally. 
 Keeping them about an inch apart works great. 
 The big variable is the composition of the soil itself (especially salts), so ideally you would calibrate for each type of soil. 
@@ -17082,6 +17083,9 @@ JST Jumper 3 Wire Assembly - PRT-09915
 Screw Terminals 3.5mm Pitch (3-Pin) - PRT-08235</text>
 <text x="167.64" y="172.72" size="1.778" layer="95">Probe Circuit</text>
 <text x="30.48" y="160.02" size="1.778" layer="97">Vcc = 3.3V-5V</text>
+<text x="17.78" y="114.3" size="1.778" layer="97">DO NOT POWER CONSTANTLY 
+It is recommended that you use a digital GPIO pin on whichever microcontroller
+ or IC you're using to control the sensor to power the sensor. </text>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="162.56" y="147.32"/>
