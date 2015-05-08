@@ -16777,7 +16777,9 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-08288" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="LOCK" package="1X03_LOCK">
@@ -16817,7 +16819,9 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-08288" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="1X03_NO_SILK" package="1X03_NO_SILK">
@@ -16891,7 +16895,10 @@ Standard 3-pin 0.1" header. Use with straight break away headers (SKU : PRT-0011
 <connect gate="G$1" pin="3" pad="3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-12591" constant="no"/>
+<attribute name="VALUE" value="3-PIN SMD" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="SMD" package="1X03-1MM-RA">
@@ -17055,13 +17062,13 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="OSHW-LOGO" device="S"/>
 <part name="JP1" library="SparkFun-Connectors" deviceset="M03" device="POLAR" value="DNP"/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M03" device="SCREW" value="DNP"/>
 <part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="GND3" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="STANDOFF1" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="STANDOFF2" library="SparkFun-Electromechanical" deviceset="STAND-OFF" device=""/>
 <part name="FID1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 <part name="FID2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="JP2" library="SparkFun-Connectors" deviceset="M03" device="SCREW_LOCK"/>
 </parts>
 <sheets>
 <sheet>
@@ -17072,8 +17079,8 @@ This is the mechanical footprint for a #4 phillips button head screw. Use the ke
 <wire x1="248.92" y1="93.98" x2="248.92" y2="91.44" width="0.2032" layer="97" style="dashdot"/>
 <wire x1="114.3" y1="185.42" x2="116.84" y2="185.42" width="0.2032" layer="97" style="dashdot"/>
 <wire x1="116.84" y1="185.42" x2="116.84" y2="93.98" width="0.2032" layer="97" style="shortdash"/>
-<text x="104.14" y="38.1" size="1.778" layer="97">Based off the Soil Moisture Circuit found at: http://www.faludi.com/2006/11/02/moisture-sensor-circuit/</text>
-<text x="104.14" y="43.18" size="1.778" layer="97">Rod length and spacing were not the most significant variables. 
+<text x="101.6" y="48.26" size="1.778" layer="97">Based off the Soil Moisture Circuit found at: http://www.faludi.com/2006/11/02/moisture-sensor-circuit/</text>
+<text x="101.6" y="53.34" size="1.778" layer="97">Rod length and spacing were not the most significant variables. 
 In general you want the probes long enough to reach the moist soil and not so close together that they are likely to touch accidentally. 
 Keeping them about an inch apart works great. 
 The big variable is the composition of the soil itself (especially salts), so ideally you would calibrate for each type of soil. 
@@ -17086,6 +17093,8 @@ Screw Terminals 3.5mm Pitch (3-Pin) - PRT-08235</text>
 <text x="17.78" y="114.3" size="1.778" layer="97">DO NOT POWER CONSTANTLY 
 It is recommended that you use a digital GPIO pin on whichever microcontroller
  or IC you're using to control the sensor to power the sensor. </text>
+<text x="101.6" y="40.64" size="1.778" layer="97">PCB design inspired by the Soil Moisture Sensor from DFRobot
+http://www.dfrobot.com/index.php?route=product/product&amp;product_id=599</text>
 </plain>
 <instances>
 <instance part="Q1" gate="G$1" x="162.56" y="147.32"/>
@@ -17107,13 +17116,13 @@ It is recommended that you use a digital GPIO pin on whichever microcontroller
 <instance part="LOGO1" gate="G$1" x="88.9" y="0"/>
 <instance part="LOGO2" gate="G$1" x="76.2" y="10.16"/>
 <instance part="JP1" gate="G$1" x="45.72" y="142.24" rot="R180"/>
-<instance part="JP2" gate="G$1" x="60.96" y="142.24"/>
 <instance part="SUPPLY4" gate="G$1" x="35.56" y="147.32"/>
 <instance part="GND3" gate="1" x="35.56" y="134.62"/>
 <instance part="STANDOFF1" gate="G$1" x="137.16" y="33.02"/>
 <instance part="STANDOFF2" gate="G$1" x="142.24" y="33.02"/>
 <instance part="FID1" gate="G$1" x="137.16" y="27.94"/>
 <instance part="FID2" gate="G$1" x="142.24" y="27.94"/>
+<instance part="JP2" gate="G$1" x="60.96" y="142.24"/>
 </instances>
 <busses>
 </busses>
@@ -17134,9 +17143,9 @@ It is recommended that you use a digital GPIO pin on whichever microcontroller
 <pinref part="JP1" gate="G$1" pin="3"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
 <wire x1="68.58" y1="139.7" x2="73.66" y2="139.7" width="0.1524" layer="91"/>
 <label x="73.66" y="139.7" size="1.27" layer="95" xref="yes"/>
+<pinref part="JP2" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="VCC" class="0">
